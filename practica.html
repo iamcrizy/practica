@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>hecho por cris</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+    .options button {
+        font-size: 48px; /* Tamaño de fuente inicial de los botones (el doble de grande) */
+    }
+</style>
+</head>
+<body background="img1.JPG">
+
+<div class="container" style="text-align: center;">
+    <h1 style="text-align: center;">¿QUIERES SER MI NOVIA?</h1>
+    <img id="imagen" src="gif1.Gif" alt="Imagen">
+
+    <div class="options">
+        <button onclick="responder('si')" id="siButton">Sí</button>
+        <button onclick="responder('no')" id="noButton">No</button>
+    </div>
+</div>
+
+<script>
+let respuestaNo = 48; // Tamaño de fuente inicial para la opción "No"
+let respuestaSi = 96; // Tamaño de fuente inicial para la opción "Sí"
+
+function responder(respuesta) {
+    if (respuesta === 'si') {
+        mostrarMensaje();
+    } else {
+        respuestaNo -= 2;
+        respuestaSi += 4;
+        actualizarBotones();
+    }
+}
+
+function mostrarMensaje() {
+    alert('Sabía que dirías que si 😉'); // Mensaje que se muestra al presionar "Sí"
+}
+
+function actualizarBotones() {
+    document.getElementById('noButton').style.fontSize = respuestaNo + 'px';
+    document.getElementById('siButton').style.fontSize = respuestaSi + 'px';
+}
+</script>
+<h1 style="text-align: right;font-size: 30px;">De:Hiram</h1>
+<h2 style="text-align: right;font-size: 30px;">Para: Ena E.</h2  
+</body>
+</html>
